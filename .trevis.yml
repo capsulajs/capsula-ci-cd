@@ -26,7 +26,7 @@ after_success:
   - npm run kss
   - npm run tsdoc
   - npm run coverage
-  - bash build/deploy.sh "${REPOSITORY_ORGANOZATION}/${REPOSITORY_NAME}"
+  - bash build/deploy.sh "${REPOSITORY_ORGANIZATION}/${REPOSITORY_NAME}"
 
 notifications:
   email:
