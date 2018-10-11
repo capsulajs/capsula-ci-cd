@@ -17,15 +17,11 @@ install:
   - npm install -g node-pre-gyp
   - /usr/bin/yarn install --production=false
   - npm run test
-  - pip install --user ansible boto botocore boto3
 
 script:
   - npm run build
 
 after_success:
-  - npm run kss
-  - npm run tsdoc
-  - npm run coverage
   - bash build/deploy.sh "${REPOSITORY_ORGANIZATION}/${REPOSITORY_NAME}"
 
 notifications:
